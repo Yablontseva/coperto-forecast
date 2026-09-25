@@ -1,3 +1,5 @@
+import pandas as pd
+
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.pipeline import Pipeline
 
@@ -24,8 +26,8 @@ def create_model() -> Pipeline:
 
 
 def train_model(
-    X_train,
-    y_train
+    X_train: pd.DataFrame,
+    y_train: pd.Series
 ) -> Pipeline:
     """
     Обучает Random Forest на обучающей выборке.
